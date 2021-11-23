@@ -15,13 +15,14 @@ public class Protagonist extends Character{
       default constructor
       pre:  instance vars are declared
       post: initializes instance vars.
-      **/
+      
     public Protagonist() {
         _hitPts = 125;
         _strength = 100;
         _defense = 40;
         _attack = .4;
     }
+    **/
 
 
     /**
