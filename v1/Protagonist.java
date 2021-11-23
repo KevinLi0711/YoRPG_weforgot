@@ -7,6 +7,7 @@ public class Protagonist extends Character{
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     private String _name = "J. Doe";
     private boolean specialized = false;
+    private int defChange;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -32,6 +33,7 @@ public class Protagonist extends Character{
         //this();
         super(125, 100, 40, .4)
         _name = name;
+        defChange = super.getDefense() / 2;
     }
 
 
@@ -44,17 +46,15 @@ public class Protagonist extends Character{
     public void specialize() {
       if (!specialized) {
         _attack = _attack * 2;
-        _defense = _defense / 2;
+        _defense = _defense -= defChange;
       }
-        _attack = .75;
-        _defense = 20;
     }
 
     //revert to normal mode
     public void normalize() {
       if (specialized) {
         _attack = _attack / 2;
-        _defense = _defense * 2;
+        _defense = _defense += defChange;
       }
     }
 
