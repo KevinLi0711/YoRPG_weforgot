@@ -1,8 +1,8 @@
 public class Character {
-  private int _hitPts;
-  private int _strength;
-  private int _defense;
-  private double _attack;
+  protected int _hitPts;
+  protected int _strength;
+  protected int _defense;
+  protected double _attack;
   
   public Character(int hitPts, int strength, int defense, double attack) {
     _hitPts = hitPts;

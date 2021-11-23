@@ -32,7 +32,7 @@ public class Protagonist extends Character{
       **/
     public Protagonist( String name ) {
         //this();
-        super(125, 100, 40, .4)
+        super(125, 100, 40, .4);
         _name = name;
         defChange = super.getDefense() / 2;
     }
@@ -46,6 +46,7 @@ public class Protagonist extends Character{
     //prepare a Protagonist for a special attack
     public void specialize() {
       if (!specialized) {
+      	specialized = true;
         _attack = _attack * 2;
         _defense = _defense -= defChange;
       }
@@ -54,6 +55,7 @@ public class Protagonist extends Character{
     //revert to normal mode
     public void normalize() {
       if (specialized) {
+      	specialized = false;
         _attack = _attack / 2;
         _defense = _defense += defChange;
       }
