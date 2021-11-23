@@ -6,6 +6,7 @@ public class Protagonist extends Character{
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     private String _name = "J. Doe";
+    private boolean specialized = false;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -41,14 +42,20 @@ public class Protagonist extends Character{
 
     //prepare a Protagonist for a special attack
     public void specialize() {
+      if (!specialized) {
+        _attack = _attack * 2;
+        _defense = _defense / 2;
+      }
         _attack = .75;
         _defense = 20;
     }
 
     //revert to normal mode
     public void normalize() {
-        _attack = .4;
-        _defense = 40;
+      if (specialized) {
+        _attack = _attack / 2;
+        _defense = _defense * 2;
+      }
     }
 
 }//end class Protagonist
