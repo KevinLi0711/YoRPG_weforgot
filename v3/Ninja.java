@@ -1,8 +1,12 @@
 public class Ninja extends Protagonist{
-  HP=50;
-  strength=200;
-  defense=20;
-  attack=0.8;
+  public Ninja(String name){
+    super(name);
+    HP=50;
+    strength=200;
+    defense=20;
+    attack=0.8;
+  }
+
 
   public void specialize() {
     if (!specialized) {
