@@ -24,6 +24,6 @@
 * 3 new Protagonists and 3 new Monsters
 * Modified driver to allow you to pick a Protagonist subclass, and to randomize Monster encounters
 # Ideas
-Creating a speed system to determine who gets to attack first, and to give players the chance to defeat their opponent without taking any damage
-A chance to receive random powerups when defeating an enemy
-The ability to view your stats and to know what Monster you are fighting
+* Creating a speed system to determine who gets to attack first, and to give players the chance to defeat their opponent without taking any damage
+* A chance to receive random powerups when defeating an enemy
+* The ability to view your stats and to know what Monster you are fighting
