@@ -4,12 +4,18 @@ public class Character {
   protected int strength;
   protected int defense;
   protected double attack;
+  protected String name;
+
+  public Character() {
+    HP = 0;
+    strength = 0;
+    defense = 0;
+    attack = 0;
+  }
   
-  public Character(int HP, int strength, int defense, double attack) {
-    this.HP = HP;
-    this.strength = strength;
-    this.defense = defense;
-    this.attack = attack;
+  public Character(String name) {
+    this();
+    this.name = name;
   }
   
   public int getDefense() {
