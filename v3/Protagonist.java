@@ -1,11 +1,11 @@
 public class Protagonist extends Character{
 
-    private String _name = "J. Doe";
-    private boolean specialized = false;
-    private int defChange;
-    private int strengthChange;
-    private int hpChange;
-    private double atkChange;
+    protected String _name = "J. Doe";
+    protected boolean specialized = false;
+    protected int defChange;
+    protected int strengthChange;
+    protected int hpChange;
+    protected double atkChange;
 
     public Protagonist( String name ) {
         super(125, 100, 40, .4);
