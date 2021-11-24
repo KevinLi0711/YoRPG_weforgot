@@ -1,2 +1,4 @@
 Disco: 
-  I got this error when trying to reference the instance vars, error: <identifier> expected
+  - I got this error when trying to reference the instance vars, error: <identifier> expected
+    - We can only change the instance variables from superclasses in a method 
+    - super must be the first method in constructor
