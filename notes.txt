@@ -1,0 +1,2 @@
+Disco: 
+  I got this error when trying to reference the instance vars, error: <identifier> expected
