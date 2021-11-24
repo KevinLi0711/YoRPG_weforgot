@@ -1,28 +1,28 @@
 public class Character {
 
-  protected int _hitPts;
-  protected int _strength;
-  protected int _defense;
-  protected double _attack;
+  protected int HP;
+  protected int strength;
+  protected int defense;
+  protected double attack;
   
-  public Character(int hitPts, int strength, int defense, double attack) {
-    _hitPts = hitPts;
-    _strength = strength;
-    _defense = defense;
-    _attack = attack;
+  public Character(int HP, int strength, int defense, double attack) {
+    this.HP = HP;
+    this.strength = strength;
+    this.defense = defense;
+    this.attack = attack;
   }
   
   public int getDefense() {
-    return _defense;
+    return defense;
   }
 
   public boolean isAlive() {
-    return _hitPts > 0;
+    return HP > 0;
   }
 
   public int attack( Character opponent ) {
 
-    int damage = (int)( (_strength * _attack) - opponent.getDefense() );
+    int damage = (int)( (strength * attack) - opponent.getDefense() );
 
     if ( damage < 0 )
       damage = 0;
@@ -33,6 +33,15 @@ public class Character {
   }
   
   public void lowerHP( int damageInflicted ) {
-    _hitPts = _hitPts - damageInflicted;
+    HP = HP - damageInflicted;
+  }
+
+  public void printStats() {
+    System.out.println("=============");
+    System.out.println("HP: " + HP);
+    System.out.println("strength: " + strength);
+    System.out.println("defense: " + defense);
+    System.out.println("attack: " + attack);
+    System.out.println("=============");
   }
 }

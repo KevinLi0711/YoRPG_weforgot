@@ -18,16 +18,16 @@ public class Protagonist extends Character{
     public void specialize() {
       if (!specialized) {
       	specialized = true;
-        _attack = _attack * 2;
-        _defense = _defense -= defChange;
+        attack = attack * 2;
+        defense -= defChange;
       }
     }
 
     public void normalize() {
       if (specialized) {
       	specialized = false;
-        _attack = _attack / 2;
-        _defense = _defense += defChange;
+        attack = attack / 2;
+        defense += defChange;
       }
     }
 }
