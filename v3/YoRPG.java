@@ -16,6 +16,14 @@
  * QCC:
  * 
  **********************************************/
+/*
+OUR DRIVER MODS:
+  - Created a method for creating a Protagnist, given an integer and a name
+  - Created a try statement to use the above method with in.readLine() as the input of the name
+  - Created a print statement to prompt people to select a class
+  - Created a method for creating a monster given an integer
+  - Modified playTurn so that when run, a random monster class is generated
+*/
 
 import java.io.*;
 import java.util.*;
@@ -60,6 +68,34 @@ public class YoRPG {
     post: according to user input, modifies instance var for difficulty 
     and instantiates a Protagonist
     =============================================*/
+  public Protagonist heroSelect(int s, String name) {
+    Protagonist a = new Protagonist(name);
+    if (s == 1) {
+      a =  new Barbarian(name);
+    }
+    if (s == 2) {
+      a =  new Ninja(name);
+    }
+    if (s == 3) {
+      a =  new Gambler(name);
+    }
+    return a;
+  }
+
+  public Monster monsterSelect(int s) {
+    Monster a = new Monster();
+    if (s == 1) {
+      a =  new Golem();
+    }
+    if (s == 2) {
+      a =  new Werewolf();
+    }
+    if (s == 3) {
+      a =  new Firebender();
+    }
+    return a;
+  }
+
   public void newGame() {
     String s;
     String name = "";
@@ -84,9 +120,21 @@ public class YoRPG {
 	    name = in.readLine();
     }
     catch ( IOException e ) { }
-
+    
     //instantiate the player's character
-    pat = new Protagonist( name );
+    pat = new Protagonist(name);
+
+    s = "\nChoose your class: \n";
+    s += "\t1: Barbarian\n";
+    s += "\t2: Ninja\n";
+    s += "\t3: Gambler\n";
+    s += "\t4: Standard\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+      pat = heroSelect(Integer.parseInt(in.readLine()), name);
+    } catch (IOException e) { }
 
   }//end newGame()
 
@@ -106,7 +154,7 @@ public class YoRPG {
     else {
       System.out.println( "\nLo, yonder monster approacheth!" );
 
-      smaug = new Monster();
+      smaug = monsterSelect( (int) (Math.random() * 4) );
 
       while( smaug.isAlive() && pat.isAlive() ) {
 

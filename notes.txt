@@ -1,5 +1,15 @@
 Disco: 
   - I got this error when trying to reference the instance vars, error: <identifier> expected
-  - We can only change the instance variables from superclasses in a method 
+  - We can only change the instance variables from superclasses in a method, unless those instance variables are modified with protected
   - super must be the first method in constructor
   - super can take the place of variables that would otherwise be unnecessarily repeated
+  - cannot reference _name before supertype constructor has been called
+      - When creating a subclass for protagonist, there was this error because the subclass required a name parameter
+  - if you call super(), and the constructor being reference also uses super(), then it kinda chains and goes further up
+  - If you try using if statements in a try statement, you get the error: exception IOException is never thrown in body of corresponding try statement
+      - But calling a method that uses if statements doesn't return this error
+
+QCC: 
+  - Do we get graded on game balance
+  - Why do if statements not work in a try statement?
+  
