@@ -6,4 +6,10 @@ public class Monster extends Character{
     defense = 20;
     attack = 1;
   }
+
+  public String about() {
+    if (description.equals("")) {
+      description += "Your standard traveler";
+    } 
+    return super.about();}
 }

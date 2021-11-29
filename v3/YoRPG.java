@@ -79,6 +79,7 @@ public class YoRPG {
     if (s == 3) {
       a =  new Gambler(name);
     }
+    System.out.println(a.about());
     return a;
   }
 
@@ -163,7 +164,7 @@ public class YoRPG {
         // ...but if you get hit, you take more damage.
         try {
           System.out.println( "\nDo you feel lucky?" );
-          System.out.println( "\t1: Nay.\n\t2: Aye!" );
+          System.out.println( "\t1: Nay.\n\t2: Aye!");
           i = Integer.parseInt( in.readLine() );
         }
         catch ( IOException e ) { }

@@ -24,12 +24,8 @@ public class Ninja extends Protagonist{
     }
   }
 
-  public static String about(){
-    String s="The Ninja has high attack and low defense. Pick them if you want to lose or win quickly.";
-    s+="\n HP=50 \n";
-    s+="\n strength=200 \n";
-    s+="\n defense=20 \n";
-    s+="\n attack=0.8 \n";
-    return s;
+  public String about(){
+    description = "The Ninja has high attack and low defense. Pick them if you want to lose or win quickly.";
+    return super.about(); 
   }
 }

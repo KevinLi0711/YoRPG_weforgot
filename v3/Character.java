@@ -5,6 +5,7 @@ public class Character {
   protected int defense;
   protected double attack;
   protected String name;
+  protected String description = "";
 
   public Character() {
     HP = 0;
@@ -42,12 +43,13 @@ public class Character {
     HP = HP - damageInflicted;
   }
 
-  public void printStats() {
-    System.out.println("=============");
-    System.out.println("HP: " + HP);
-    System.out.println("strength: " + strength);
-    System.out.println("defense: " + defense);
-    System.out.println("attack: " + attack);
-    System.out.println("=============");
+  public String about() {
+    description+=("\n" + "=============" + "\n");
+    description+=("HP: " + HP + "\n");
+    description+=("strength: " + strength + "\n");
+    description+=("defense: " + defense + "\n");
+    description+=("attack: " + attack + "\n");
+    description+=("=============");
+    return description;
   }
 }

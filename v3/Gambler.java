@@ -38,7 +38,8 @@ public class Gambler extends Protagonist{
     }
   }
 
-    public static String about() {
-        return "The Gambler has a high strength but low attack. Its special attack has a chance to increase its attack significantly but it also has a chance to fail."; 
+    public String about() {
+        description = "The Gambler has a high strength but low attack. Its special attack has a chance to increase its attack significantly but it also has a chance to fail.";
+        return super.about(); 
     }
 }

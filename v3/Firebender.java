@@ -20,8 +20,8 @@ public class Firebender extends Monster {
         return damage + burn;
     }
 
-    public static String about() {
-        return 
-        "Firebenders have low attack, but high defense. They can bypass defense with their burn effect, which deals more damage each time they attack";
+    public String about() {
+        description = "Firebenders have low attack, but high defense. They can bypass defense with their burn effect, which deals more damage each time they attack";
+        return super.about();
     }
 }

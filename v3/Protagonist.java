@@ -31,4 +31,11 @@ public class Protagonist extends Character{
         defense += defChange;
       }
     }
+
+    public String about() {
+      if (description.equals("")) {
+        description += "Your standard traveler";
+      } 
+      return super.about();
+    }
 }

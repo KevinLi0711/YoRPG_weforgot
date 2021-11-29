@@ -21,8 +21,8 @@ public class Werewolf extends Monster{
         return damage;
     }
 
-    public static String about() {
-        return 
-        "The werewolf class has low HP and defense, but high attack. In its damage calculation, the werewolf has a 25% chance to deal twice as much damage.";
+    public String about() {
+        description = "The werewolf class has low HP and defense, but high attack. In its damage calculation, the werewolf has a 25% chance to deal twice as much damage.";
+        return super.about(); 
     }
 }

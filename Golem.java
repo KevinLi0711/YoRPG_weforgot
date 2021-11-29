@@ -19,8 +19,8 @@ public class Golem extends Monster{
         return damage;
     }
 
-    public static String about() {
-        return 
-        "The golem class has low attack, but high HP and defense. It deals additional damage based on its missing HP";
+    public String about() {
+        description = "The golem class has low attack, but high HP and defense. It deals additional damage based on its missing HP";
+        return super.about();
     }
 }
